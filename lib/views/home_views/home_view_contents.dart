@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 class HomeViewContents {
 
-  //HomePageViewController
+  //Drawer Key
+  static final GlobalKey<ScaffoldState> drawerKey = GlobalKey<ScaffoldState>();
 
 }

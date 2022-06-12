@@ -6,6 +6,7 @@ import 'package:turnip/views/home_views/profile_views/profile_screen.dart';
 import '../../../models/utils/app_icons.dart';
 import '../../../models/utils/app_strings.dart';
 import '../../custom_widgets/app_bar.dart';
+import '../home_view_contents.dart';
 
 class HomeTabScreen extends StatelessWidget {
   const HomeTabScreen({Key? key}) : super(key: key);
@@ -25,7 +26,9 @@ class HomeTabScreen extends StatelessWidget {
             trailingIcon: AppIcons.user,
             backgroundColor: AppColors.pureWhite,
             visibilityData: true,
-            leadingButtonFunctionality: () {},
+            leadingButtonFunctionality: () {
+              HomeViewContents.drawerKey.currentState!.openDrawer();
+            },
             trailingButtonFunctionality: () {
               Navigator.push(
                 context,

@@ -5,6 +5,7 @@ import 'package:turnip/views/home_views/create_tab_views/create_tab_screen.dart'
 import 'package:turnip/views/home_views/setting_tab_views/setting_tab_screen.dart';
 
 import '../../controllers/cubits/home_page_view_index_cubit.dart';
+import '../../models/utils/app_drawer.dart';
 import '../../models/utils/app_icons.dart';
 import '../../models/utils/app_strings.dart';
 import '../custom_widgets/app_bar.dart';
@@ -29,6 +30,10 @@ class _HomePageViewScreenState extends State<HomePageViewScreen> {
         return Scaffold(
           extendBody: true,
           backgroundColor: Colors.transparent,
+          key: HomeViewContents.drawerKey,
+          drawer: const AppDrawer(),
+          drawerEnableOpenDragGesture: true,
+          drawerScrimColor: Colors.black54,
           floatingActionButtonLocation: FloatingActionButtonLocation
               .centerDocked,
           floatingActionButton: FloatingActionBotton(
