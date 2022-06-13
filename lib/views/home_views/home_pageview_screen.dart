@@ -6,9 +6,6 @@ import 'package:turnip/views/home_views/setting_tab_views/setting_tab_screen.dar
 
 import '../../controllers/cubits/home_page_view_index_cubit.dart';
 import '../../models/utils/app_drawer.dart';
-import '../../models/utils/app_icons.dart';
-import '../../models/utils/app_strings.dart';
-import '../custom_widgets/app_bar.dart';
 import '../custom_widgets/bottom_navigation_bar.dart';
 import '../custom_widgets/floating_action_button.dart';
 import 'home_tab_views/home_tab_screen.dart';
@@ -47,9 +44,9 @@ class _HomePageViewScreenState extends State<HomePageViewScreen> {
             child: PageView(
               physics: const NeverScrollableScrollPhysics(),
               controller: homePageViewController,
-              children:  [
-                const HomeTabScreen(), //0
-                const CreateTabScreen(), //1
+              children:  const [
+                HomeTabScreen(), //0
+                CreateTabScreen(), //1
                 // SettingTabScreen(
                 //   homePageViewController: homePageViewController,
                 // ), //2

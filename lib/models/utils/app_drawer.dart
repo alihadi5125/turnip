@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-
 class AppDrawer extends StatelessWidget {
   const AppDrawer({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 1.sw/1.4,
+    return SizedBox(
+      height: 1.sh,
+      width: 1.sw / 1.4,
       child: ClipRRect(
         borderRadius: BorderRadius.only(
           topRight: Radius.circular(80.sp),
@@ -16,6 +16,26 @@ class AppDrawer extends StatelessWidget {
         ),
         child: Drawer(
           elevation: 0.0,
+          backgroundColor: Colors.black26,
+          child: Container(
+            height: 1.sh,
+            width: 1.sw,
+            decoration: const BoxDecoration(
+              image: DecorationImage(
+                  image: AssetImage('assets/images/Group 298.png'),
+                  fit: BoxFit.fill),
+            ),
+            child: Stack(
+              children: [
+                Positioned(
+                  top: 0.sp,
+                  left: 0.sp,
+                  right: 0.sp,
+                  child: Container(),
+                ),
+              ],
+            ),
+          ),
           // child: ListView(
           //   shrinkWrap: true,
           //   padding: EdgeInsets.zero,
